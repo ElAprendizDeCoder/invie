@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> Invie - tus mejores guitarras!!!</title>
+	<head> 
+		<!-- ! --><title> Invie - tus mejores guitarras!!!</title>
 		<meta charset= "utf-8"/>
 		<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet"> 
 		<link rel ="stylesheet" href= "css/invie.css"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<!-- <link rel="stylesheet" media ="(max-width: 800px)" href="css/media-querie.css"/> -->
 	</head>
-	<body>
-		<div class= "background">
-			<header id= "header" class="header contenedor">
-						<figure class= "logotipo" > 
+	<body class="precios"> 
+			<header id= "header" class="header background">
+				<div class="contenedor">
+					<figure class= "logotipo" > 
 							<a href= "index.html">
-								<img src="images/invie.png" width="186" height = "60" alt ="Invie logotipo" />	
+								<img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x"width="186" height = "60" alt ="Invie logotipo" />	
 							</a>	
-						</figure>	
-						<nav class="menu">   
-						<ul>
-							<li>
-								<a href="index.html" >Home</a>
-							</li>
-							<li>
-								<a href="index.html#guitarras" >Guitarras</a>		
-					    </li>
-							<li>	
-								<a href= "precios.html">Precios</a>
-							</li>
+						</figure>
+						<span class="burger-button icon-menu" id="burger-button"> </span>	
+						<nav class="menu" id="menu">   
+							<ul>
+								<li>
+									<a href="index.html" >Home</a>
+								</li>
+								<li>
+									<a href="index.html#guitarras" >Guitarras</a>		
+					   		 	</li>
+								<li>	
+									<a href= "precios.html">Precios</a>
+								</li>
 							</ul>
-						</nav>
-			</header>
-		</div>	
+							</nav>	
+				</div>						
+			</header>	
 		<section class="tabla">
 			<div class ="contenedor">
 				<table>
@@ -37,6 +40,7 @@
 							<th>Modelo</th>
 							<th>Precio</th>
 							<th>Descripción</th>
+							<th>Calidad</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -44,63 +48,106 @@
 							<td>Invie classic</td>
 							<td>$100000</td>
 							<td>Una guitarra muy pro</td>
+							<td>Esta chida 100%</td>
 						</tr>
 						<tr>
 							<td>Invie classic</td>
 							<td>$100000</td>
 							<td>Una guitarra muy pro</td>
-						</tr>
-						<tr>
-							<td>Invie classic</td>
-							<td>$100000</td>
-							<td>Una guitarra muy pro</td>
+							<td>Esta chida 100%</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>				
 		</section>	
-		<footer class = "footer ">
-			<div class = "contenedor">
-			<div class = "contacto">
-				<img src ="images/invie-white.png" alt ="logotipo blanco">
-				<a href= "tel:+525547824673"><strong>Telefono</strong> <span>5255173562782</span> </a>
-				<a href="mailto:contacto@invie.com"><strong> E mail:</strong> <span>contacto@invie.com</span> </a>
-			</div>							
-			<form class = "formulario">
-				<div class = "col1">
-					<label for ="nombre">Nombre</label>
-					<input type ="text" required id = "nombre" name="nombre" />
-					<label for ="email">Email</label>
-					<input type ="email" required id = "email" name ="email" />										
-					<div class ="sexo">
-						<label for="mujer">
-							<input type= "radio" id ="mujer" checked name="sexo" value="mujer"/>mujer
-						</label>
-						<label for="hombre">
-							<input type= "radio" id ="hombre" name="sexo" value="hombre"/>hombre
-						</label>
-					</div>	
-					<div class = "intereses">
-						<label for = "cotizacion">	
-							<input type="checkbox" checked id= "cotizacion" name= "intereses" value="cotizacion"> Cotización
-						</label>
-						<label for = "reclamos">	
-							<input type="checkbox" id ="reclamos" name ="intereses" value="reclamos"> Reclamos
-						</label>
-						<label for="comentarios"> 	
-							<input type="checkbox" id = "comentarios" name = "intereses" value="comentarios">Comentarios
-						</label>
-						<label for= "otros">	
-							<input type="checkbox" id= "otros" name = "intereses" value="otros">Otros
-						</label>							
-					</div>
-				</div>	
-				<div class= "col2">
-					<label for="comentarios">Comentarios</label>
-					<textarea name="comentarios" id ="comentarios" cols="30" rows="7"></textarea>
-						<input type="submit" class ="button" value="Enviar"/>	
-				</div>
-			</form>
-		</footer>
+		<footer class="footer">
+      	<div class="contenedor">
+        <div class="contacto">
+          <img data-src="images/invie-white.png|images/invie-white2x.png" alt="logotipo blanco"/>
+          <a href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
+          <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
+        </div>
+        <form class="formulario">
+          <div class="col1">
+            <label for="nombre">Nombre</label>
+            <input type="text" required id="nombre" name="nombre"/>
+            <label for="email">E-mail</label>
+            <input type="email" required id="email" name="email"/>
+            <div class="sexo">
+              <label for="mujer">
+                <input type="radio" id="mujer" checked name="sexo" value="mujer"> mujer
+              </label>
+              <label for="hombre">
+                <input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+              </label>
+            </div>
+            <div class="intereses">
+              <label for="cotizacion">
+                <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion"> Cotización
+              </label>
+              <label for="reclamos">
+                <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+              </label>
+              <label for="comentarios">
+                <input type="checkbox" id="comentarios" name="intereses" value="comantarios"> Comentarios
+              </label>
+              <label for="otros">
+                <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+              </label>
+            </div>
+          </div>
+          <div class="col2">
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
+            <input type="submit" value="Enviar" class="button"/>
+          </div>
+        </form>
+      </div>
+    </footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>
+    	 var consulta = window.matchMedia('(max-width: 500px)');
+      	 consulta.addListener(mediaQuery);
+		
+		var $burgerButton = document.getElementById('burger-button');
+    	var $menu = document.getElementById('menu');
+    	function toggleMenu(){
+    		$menu.classList.toggle('active');
+    	};
+    	function showMenu(){
+    		$menu.classList.add('active');
+    	};
+    	function hideMenu(){
+    		$menu.classList.remove('active');
+    	};    	
+    	function mediaQuery(){
+    		if (consulta.matches){
+    			console.log('se cumplio la condiciòn');
+    			$burgerButton.addEventListener('touchstart', toggleMenu);
+			}else{
+    			$burgerButton.removeEventListener('touchstart', toggleMenu);
+    			console.log('no se cumple la condicion');
+    		}	
+    			    		
+    	};    	
+    	mediaQuery();
+    	// Lazy loading
+    	var bLazy = new Blazy({
+    		selector:'img'
+    	// options
+		});
+    	//Gestos touch
+    	var $body = document.body;
+    	
+    	var gestos = new Hammer($body);
+    	gestos.on('swipeleft',hideMenu);
+    	gestos.on('swiperight',showMenu);
+
+
+
+
+    </script>
 	</body>
-</html>			
+</html>	
+	

@@ -50,6 +50,7 @@ body {
 
 table {
   width: 100%;
+  display: table;
 }
 
 th {
@@ -79,11 +80,18 @@ input:focus, textarea:focus {
   background: lightgray;
 }
 
+video{
+
+	width: 100%;
+}
+
 .contenedor {
   max-width: 800px;
   margin: auto;
   position: relative;
+
 }
+
 
 .background {
   background-color: #466173;
@@ -216,7 +224,7 @@ input:focus, textarea:focus {
 }
 
 .guitarra{
-	margin: 10px 10px 40px 10px; 
+	margin: 60px 10px 40px 10px; 
 	padding:10px;
 	/*overflow: hidden;*/
 	border: 1px solid #1F313C;
@@ -241,7 +249,7 @@ input:focus, textarea:focus {
 	/*margin-top: 0;*/
 	margin-left: 370px;
 	position: relative;
-	bottom: 90px;
+	bottom: 0px;
 
 }
 
@@ -328,15 +336,42 @@ input:focus, textarea:focus {
 	background: #395667;
 	display: inline-block;
 	text-align: center;
-	position: absolute;
+	position: fixed;
 	left:20px;
 	top:20px;
 	cursor:pointer;
 	z-index: 3;
+	display:none;
+	color:white;
 } 
 
 
+.video-responsive-contenedor{
+	position: relative;
+	padding-bottom: 56.25%;
+}
 
+.video-responsive-src{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0px;
+	width:100%;
+	height: 100%;
+}
+
+.video-demo{
+	max-width: 500px;
+	width: 100%;
+	border:5px solid #3c5b6e;
+}
+
+.video-demo-contenedor{
+	display: flex;
+	justify-content:center;
+	margin-bottom: 80px;
+}
 
 @media screen and (max-width: 800px){
 	/*.contenedor{
@@ -345,6 +380,20 @@ input:focus, textarea:focus {
 	}
 */
 	
+	/*precios*/
+	.tabla{
+		margin: 50px 20px;
+	}
+
+	.tabla .contenedor{
+		overflow: auto;
+		border:1px solid #273b47;
+
+	}
+	/*precios*/
+	
+
+
 	/*Portada*/
 	.titulo{
 		font-size: 45px;
@@ -365,6 +414,9 @@ input:focus, textarea:focus {
 	/*Portada*/
 	
 	/*Guitarras*/
+	.video-demo-contenedor{
+		margin-bottom: 30px;
+	}
 	.guitarras{
 		
 		text-align: center;
@@ -451,7 +503,7 @@ input:focus, textarea:focus {
 
 
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 650px){
 	
 	.header{
 
@@ -474,6 +526,12 @@ input:focus, textarea:focus {
 	.menu ul{
 		padding:0;
 	}
+	/*guitarras*/
+	/*.video-demo{
+		margin: 0 10px;
+	}
+	*/
+	/*guitarras*/
 
 }
 
@@ -481,9 +539,26 @@ input:focus, textarea:focus {
 
 		/*Portada*/
 		
+		.portada .button{
+			display:block;
+		}
+		.precios .header .logotipo {
+			margin: 50px 0;
+		}
+		.burger-button{
+			display:block;
+		}
 
 		.portada .contenedor{
 			position:static;
+		}
+
+		.header{
+			position: static;
+		}
+
+		.header .contenedor{
+			position: static;
 		}
 
 		.menu{
@@ -527,12 +602,17 @@ input:focus, textarea:focus {
 			text-align: center;
 
 		}
+		.portada .button{
+			display:block;
+		}
 		.titulo{
 			font-size: 30px;
 		}
 		.tittle{
 			font-size: 16px;
 		}
+		
+
 		/*Portada*/
 	
 		/*guitarras*/
@@ -544,8 +624,23 @@ input:focus, textarea:focus {
 		.tittle-b{
 			font-size: 30px;
 		}
-
-
+		.video-demo-contenedor{
+			margin:0 10px 30px 10px;
+		}
+		
 		/*guitarras*/
+		/*footer*/
+		.col2{
+			align-items:stretch; 
+		}
 }
 
+
+@media screen and ( -webkit-min-device-pixel-ratio: 2){
+	 .background {
+  		background-color: #466173;
+  		background-image: url('../images/background2x.png');
+  		/*background-size: cover;*/
+}
+
+}
